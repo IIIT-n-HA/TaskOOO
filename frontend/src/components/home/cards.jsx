@@ -4,7 +4,7 @@ import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { RiAddCircleFill } from "react-icons/ri";
 
-const Cards = ({ home }) => {
+const Cards = ({ home, SetDiv }) => {
   const data = [
     {
       title: "Projects",
@@ -50,10 +50,15 @@ const Cards = ({ home }) => {
           </div>
         ))}
       {home === "true" && (
-        <div className="flex flex-col justify-center items-center bg-gray-800 rounded-sm p-4 text-gray-300 hover:scale-105 hover:cursor-pointer transition-all duration-300">
+        <button
+          className="flex flex-col justify-center items-center bg-gray-800 rounded-sm p-4 text-gray-300 hover:scale-105 hover:cursor-pointer transition-all duration-300"
+          onClick={() => {
+            SetDiv("fixed");
+          }}
+        >
           <RiAddCircleFill className="text-5xl" />
           <h2 className="text-2xl mt-4">Add Task</h2>
-        </div>
+        </button>
       )}
     </div>
   );

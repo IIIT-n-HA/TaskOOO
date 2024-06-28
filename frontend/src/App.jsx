@@ -5,6 +5,8 @@ import AllTask from "./pages/AllTask";
 import ImportantTask from "./pages/ImportantTask";
 import CompletedTask from "./pages/CompletedTask";
 import IncompletedTask from "./pages/IncompletedTask";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
             <Route path="/complete" element={<CompletedTask />} />
             <Route path="/incomplete" element={<IncompletedTask />} />
           </Route>
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
     </div>

@@ -8,12 +8,12 @@ const AllTask = () => {
   return (
     <div>
       <div className="w-full flex justify-end px-4 py-2">
-        <button>
+        <button onClick={() => setInputDiv("fixed")}>
           <RiAddCircleFill className="text-4xl text-gray-400 hover:text-gray-100 transition-all duration-300" />
         </button>
       </div>
-      <Cards home={"true"} />
-      <InputData />
+      <Cards home={"true"} SetDiv={setInputDiv} />
+      <InputData InputDiv={inputDiv} SetDiv={setInputDiv} />
     </div>
   );
 };

@@ -1,14 +1,23 @@
 import React from "react";
 import { CgClose } from "react-icons/cg";
 
-const InputData = () => {
+const InputData = ({ InputDiv, SetDiv }) => {
   return (
     <>
-      <div className="fixed top-0 left-0 bg-gray-800 opacity-80 h-screen w-full"></div>
-      <div className="fixed top-0 left-0 flex items-center justify-center h-screen w-full">
+      <div
+        className={`${InputDiv} top-0 left-0 bg-gray-800 opacity-80 h-screen w-full`}
+      ></div>
+      <div
+        className={`${InputDiv} top-0 left-0 flex items-center justify-center h-screen w-full`}
+      >
         <div className="w-2/6 bg-gray-900 p-4 rounded">
           <div className="flex justify-end">
-            <button className="text-2xl">
+            <button
+              className="text-2xl"
+              onClick={() => {
+                SetDiv("hidden");
+              }}
+            >
               <CgClose />
             </button>
           </div>
